@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NytroN Esports</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      border-bottom: 2px solid #e60000;
+      padding: 10px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 50px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    header h1 {
+      display: inline-block;
+      font-size: 2rem;
+      color: #e60000;
+      margin: 0;
+      vertical-align: middle;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #000;
+      border-bottom: 1px solid #e60000;
+    }
+
+    nav button {
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      padding: 14px 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    nav button:hover, nav button.active {
+      background-color: #e60000;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .section {
+      display: none;
+      padding: 20px;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 2rem;
+      color: #e60000;
+    }
+
+    .roster-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px 40px;
+    }
+
+    .player-card {
+      background-color: #111;
+      border: 1px solid #e60000;
+      border-radius: 12px;
+      width: 180px;
+      text-align: center;
+      overflow: hidden;
+      box-shadow: 0 0 10px #e60000;
+    }
+
+    .player-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background-color: #000;
+    }
+
+    .player-name {
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 10px 0 0;
+    }
+
+    .player-instagram {
+      padding-bottom: 12px;
+      font-size: 0.9rem;
+    }
+
+    .player-instagram a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .player-instagram a:hover {
+      color: #e60000;
+    }
+
+    .top-list, .news-list {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .top-list li, .news-list li {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid #e60000;
+    }
+
+    footer img {
+      height: 40px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo_nytron.png" alt="NytroN Logo">
+    <h1>NytroN Esports</h1>
+  </header>
+
+  <nav>
+    <button class="active" onclick="mostrarSeccion('roster')">Roster</button>
+    <button onclick="mostrarSeccion('noticias')">Noticias</button>
+    <button onclick="mostrarSeccion('top')">Top Players</button>
+  </nav>
+
+  <!-- ROSTER -->
+  <div id="roster" class="section active">
+    <h2 class="section-title">Roster Femenino</h2>
+    <div class="roster-grid">
+      <div class="player-card">
+        <img src="ruru.jpg" alt="RURU">
+        <div class="player-name">RURU 🇧🇷</div>
+        <div class="player-instagram"><a href="https://instagram.com/rubyafps" target="_blank">@rubyafps</a></div>
+      </div>
+      <div class="player-card">
+        <img src="meraa.jpg" alt="MERAA">
+        <div class="player-name">MERAA 🇧🇷</div>
+        <div class="player-instagram"><a href="https://instagram.com/mera_fps" target="_blank">@mera_fps</a></div>
+      </div>
+      <div class="player-card">
+        <img src="margarida.jpg" alt="Margarida">
+        <div class="player-name">Margarida 🇵🇹</div>
+        <div class="player-instagram"><a href="https://instagram.com/margaridapubgm" target="_blank">@margaridapubgm</a></div>
+      </div>
+      <div class="player-card">
+        <img src="nanda.jpg" alt="NANDA">
+        <div class="player-name">NANDA 🇧🇷</div>
+        <div class="player-instagram"><a href="https://instagram.com/nandaapbg" target="_blank">@nandaapbg</a></div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Roster Masculino</h2>
+    <div class="roster-grid">
+      <div class="player-card">
+        <img src="silueta.jpg" alt="GIYUU">
+        <div class="player-name">GIYUU 🇩🇴</div>
+      </div>
+      <div class="player-card">
+        <img src="silueta.jpg" alt="Chris">
+        <div class="player-name">Chris 🇵🇷</div>
+      </div>
+      <div class="player-card">
+        <img src="silueta.jpg" alt="Yeyito">
+        <div class="player-name">Yeyito 🇵🇷</div>
+      </div>
+      <div class="player-card">
+        <img src="silueta.jpg" alt="Bélico">
+        <div class="player-name">Bélico 🇲🇽</div>
+      </div>
+      <div class="player-card">
+        <img src="silueta.jpg" alt="Wonderboy">
+        <div class="player-name">Wonderboy 🇹🇭</div>
+      </div>
+      <div class="player-card">
+        <img src="silueta.jpg" alt="Villa">
+        <div class="player-name">Villa 🇨🇷</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTICIAS -->
+  <div id="noticias" class="section">
+    <h2 class="section-title">Noticias de PUBG Mobile Esports</h2>
+    <ul class="news-list">
+      <li>PUBG MOBILE Esports anuncia cambios en el PMWI 2025.</li>
+      <li>Las clasificatorias de PMGC 2025 ya están abiertas.</li>
+      <li>Equipos de LATAM dominaron en la última semana de liga.</li>
+      <li>Se confirma el regreso de torneos presenciales en junio.</li>
+    </ul>
+  </div>
+
+  <!-- TOP PLAYERS -->
+  <div id="top" class="section">
+    <h2 class="section-title">Top Players NA (según Liquipedia)</h2>
+    <ul class="top-list">
+      <li>Koops (Nova Esports NA)</li>
+      <li>Spec (Knights)</li>
+      <li>AlucarD (Dope Esports)</li>
+      <li>J7 (Nova Esports NA)</li>
+      <li>Fate (Knights)</li>
+    </ul>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 NytroN Esports | Todos los derechos reservados</p>
+    <img src="pubg_logo.png" alt="PUBG Logo">
+  </footer>
+
+  <script>
+    function mostrarSeccion(id) {
+      document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+
+      document.querySelectorAll('nav button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
